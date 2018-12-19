@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import java.util.Iterator;
+
 public class PrepareGameActivity extends AppCompatActivity {
 
     @Override
@@ -15,7 +17,9 @@ public class PrepareGameActivity extends AppCompatActivity {
         Intent intent = getIntent();
         TextView textView = findViewById(R.id.displayText);
         String s = "Level : " + intent.getStringExtra(MainActivity.SELECTED_LEVEL) + ". Selected players : ";
-        intent.getStringArrayListExtra(MainActivity.SELECTED_PLAYERS).forEach((n) s += n);
-        textView.setText();
+        for(Iterator<String> iter = intent.getStringArrayListExtra(MainActivity.SELECTED_PLAYERS).iterator(); iter.hasNext();){
+            s += iter.next() + ", ";
+        }
+        textView.setText(s);
     }
 }
