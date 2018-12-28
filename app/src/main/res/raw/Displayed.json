@@ -1,0 +1,38 @@
+{"displayables": [
+    {
+      "Text": "Question1 {0}",
+      "Level": 1,
+      "Type": "Question",
+      "Targets": [ "Any" ]
+    },
+    {
+      "Text": "Dare1 {0}",
+      "Level": 1,
+      "Type": "Dare",
+      "Targets": ["Girl"]
+    },
+    {
+      "Text": "Question2 {0}",
+      "Level": 2,
+      "Type": "Question",
+      "Targets": ["Boy"]
+    },
+    {
+      "Text": "Dare2 {0}",
+      "Level": 2,
+      "Type": "Dare",
+      "Targets": ["Boy"]
+    },
+    {
+      "Text": "Question3 {0}",
+      "Level": 3,
+      "Type": "Question",
+      "Targets": ["Girl"]
+    },
+    {
+      "Text": "{0} smashes {1} while {2} laugh}",
+      "Level": 3,
+      "Type": "Dare",
+      "Targets": ["Boy", "Girl", "Any"]
+    }]
+}
