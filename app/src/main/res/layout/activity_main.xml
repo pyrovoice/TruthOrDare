@@ -7,99 +7,32 @@
     tools:context=".MainActivity">
 
 
-    <CheckBox
-        android:id="@+id/panda_icon1"
-        android:layout_width="39dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/panda_selector"
-        android:button="@null"
-        android:gravity="center"
-        android:text="S"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.116" />
-
-    <CheckBox
-        android:id="@+id/panda_icon2"
-        android:layout_width="39dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/panda_selector"
-        android:button="@null"
-        android:gravity="center"
-        android:text="S"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.116" />
-
-    <CheckBox
-        android:id="@+id/panda_icon3"
-        android:layout_width="39dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="196dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/panda_selector"
-        android:button="@null"
-        android:gravity="center"
-        android:text="S"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.116" />
-
-    <CheckBox
-        android:id="@+id/panda_icon4"
-        android:layout_width="39dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="280dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/panda_selector"
-        android:button="@null"
-        android:gravity="center"
-        android:text="S"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.116" />
-
     <TextView
         android:id="@+id/levelIndicator"
         android:layout_width="51dp"
         android:layout_height="125dp"
-        android:layout_marginStart="84dp"
+        android:layout_marginBottom="8dp"
         android:text="3"
         app:autoSizeMaxTextSize="100sp"
         app:autoSizeMinTextSize="12sp"
         app:autoSizeStepGranularity="2sp"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/leftArrowLevel" />
 
     <ImageButton
         android:id="@+id/rightArrowLevel"
         android:layout_width="91dp"
         android:layout_height="101dp"
+        android:layout_marginStart="8dp"
         android:scaleType="fitCenter"
         android:src="@drawable/arrow_right"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.46"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/levelIndicator"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.98" />
+        app:layout_constraintVertical_bias="0.978" />
 
     <ImageButton
         android:id="@+id/leftArrowLevel"
@@ -118,9 +51,81 @@
         android:id="@+id/button_validate"
         android:layout_width="138dp"
         android:layout_height="98dp"
-        android:layout_marginStart="240dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="404dp"
         android:text="Validate"
+        app:layout_constraintStart_toEndOf="@+id/rightArrowLevel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Player1Button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/btn_bckgrd_grey"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="36dp"
+        android:text="🐱"
+        android:textSize="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Player2Button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/btn_bckgrd_grey"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="36dp"
+        android:text="🐶"
+        android:textSize="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Player3Button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/btn_bckgrd_grey"
+        android:layout_marginStart="215dp"
+        android:layout_marginTop="36dp"
+        android:text="🐵"
+        android:textSize="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Player4Button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/btn_bckgrd_grey"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="120dp"
+        android:text="🦄"
+        android:textSize="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Player5Button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/btn_bckgrd_grey"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="120dp"
+        android:text="🐯"
+        android:textSize="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Player6Button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/btn_bckgrd_grey"
+        android:layout_marginStart="215dp"
+        android:layout_marginTop="120dp"
+        android:text="🐹"
+        android:textSize="50dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

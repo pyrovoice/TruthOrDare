@@ -1,7 +1,5 @@
 package grazzinisoftwares.truthordare;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 
 enum DisplayableType {QUESTION, DARE}
@@ -49,5 +47,23 @@ public class Displayable {
 
     public void setTargets(ArrayList<Gender> targets) {
         this.targets = targets;
+    }
+
+    public int getNumberMale() {
+        int counter = 0;
+        for(Gender g : targets){
+            if(g == Gender.Boy)
+                counter++;
+        }
+        return counter;
+    }
+
+    public int getNumberFemale() {
+        int counter = 0;
+        for(Gender g : targets){
+            if(g == Gender.Girl)
+                counter++;
+        }
+        return counter;
     }
 }

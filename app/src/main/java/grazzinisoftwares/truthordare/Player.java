@@ -1,24 +1,14 @@
 package grazzinisoftwares.truthordare;
 
-enum Gender {MALE, FEMALE, ANY}
+enum Gender {Boy, Girl, Any}
 
 public class Player {
-    public int id;
     public String iconName;
     public Gender gender;
 
-    public Player(int id, String iconName, Gender gender) {
-        this.id = id;
+    public Player( String iconName, Gender gender) {
         this.iconName = iconName;
         this.gender = gender;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getIconName() {

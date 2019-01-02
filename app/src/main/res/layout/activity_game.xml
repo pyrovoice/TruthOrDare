@@ -7,12 +7,29 @@
     tools:context=".GameActivity">
 
     <TextView
-        android:id="@+id/displayText"
-        android:layout_width="326dp"
-        android:layout_height="42dp"
+        android:id="@+id/displayableText"
+        android:layout_width="341dp"
+        android:layout_height="215dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#000000"
         android:text="TextView"
+        android:gravity="center_vertical"
+        android:textSize="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/thumbUp"
+        android:layout_width="177dp"
+        android:layout_height="166dp"
+        android:layout_marginStart="188dp"
+        android:layout_marginBottom="32dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/thumbs_up" />
+
+
 </android.support.constraint.ConstraintLayout>
