@@ -57,7 +57,7 @@
       ]
     },
     {
-      "Text": "{0} What did people think or thought about you that was completely untrue?",
+      "Text": "{0} What did people think or have thought about you that was completely untrue?",
       "Level": 2,
       "Type": "Question",
       "Targets": [
@@ -177,11 +177,11 @@
       ]
     },
     {
-      "Text": "{0}, the girls have 30 seconds to put makeup on you (you cannot run). If the result is ugly, all the girls participating drinks.",
+      "Text": "{0}, the girls have 30 seconds to put makeup on you (you cannot run). If the result is ugly, all participating girls drink.",
       "Level": 3,
       "Type": "Dare",
       "Targets": [
-        "Boy", "Girl"
+        "Boy"
       ]
     },
     {
@@ -305,7 +305,8 @@
       "Type": "Dare",
       "Targets": [
         "Any"
-      ]
+      ],
+      "Font-size": 20
     },
     {
       "Text": "{0}, you must talk in your best accent for the next 5 rounds.",
@@ -430,7 +431,7 @@
     },
     {
       "Text": "{0} Show a piece of underwear to the room.",
-      "Level": 2,
+      "Level": 3,
       "Type": "Dare",
       "Targets": [
         "Girl"

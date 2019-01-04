@@ -19,7 +19,7 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private static final int LEVEL_LOWER_LIMIT = 3;
+    private static final int LEVEL_LOWER_LIMIT = 2;
     private static final int LEVEL_HIGHER_LIMIT = 3;
     private Map<String, Gender> selectedPlayers = new HashMap<String, Gender>();
 

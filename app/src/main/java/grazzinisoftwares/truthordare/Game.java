@@ -6,13 +6,11 @@ import java.util.Random;
 
 public class Game {
     ArrayList<Player> players = new ArrayList<>();
-    int level;
-    ArrayList<Displayable> displayables = new ArrayList<>();
+    float level;
 
-    public Game(ArrayList<Player> players, int level, ArrayList<Displayable> displayables) {
+    public Game(ArrayList<Player> players, float level) {
         this.players = players;
         this.level = level;
-        this.displayables = displayables;
     }
 
     public ArrayList<Player> getPlayers() {
@@ -23,20 +21,12 @@ public class Game {
         this.players = players;
     }
 
-    public int getLevel() {
+    public float getLevel() {
         return level;
     }
 
-    public void setLevel(int level) {
+    public void setLevel(float level) {
         this.level = level;
-    }
-
-    public ArrayList<Displayable> getDisplayables() {
-        return displayables;
-    }
-
-    public void setDisplayables(ArrayList<Displayable> displayables) {
-        this.displayables = displayables;
     }
 
     // Return players at random given a list of genders
@@ -58,28 +48,7 @@ public class Game {
         return selectedPlayers;
     }
 
-    public ArrayList<Displayable> getRandomDisplayables() {
-        ArrayList<Displayable> levelDisplayable = new ArrayList<>();
-        for (Displayable d : displayables) {
-            if (d.level == this.level && isDisplayableCompatible(d)) {
-                levelDisplayable.add(d);
-            }
-        }
-        if (levelDisplayable.size() <= 20) {
-            return levelDisplayable;
-        }
-
-        Random r = new Random();
-        ArrayList<Displayable> selectedDisplayables = new ArrayList<>();
-        while (selectedDisplayables.size() < 20) {
-            Displayable d = levelDisplayable.get(r.nextInt(levelDisplayable.size() - 1));
-            if (!selectedDisplayables.contains(d))
-                selectedDisplayables.add(d);
-        }
-        return selectedDisplayables;
-    }
-
-    private boolean isDisplayableCompatible(Displayable d) {
+    public boolean isDisplayableCompatible(Displayable d) {
         return d.getNumberMale() <= this.getNumberMale() && d.getNumberFemale() <= this.getNumberFemale() && d.targets.size() <= this.players.size();
     }
 

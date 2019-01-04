@@ -26,6 +26,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     private ArrayList<Displayable> currentDisplayables = new ArrayList();
     private int currentIterationNumber;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
@@ -37,53 +38,9 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         // Get user selected data
         Intent intent = getIntent();
         TextView textView = findViewById(R.id.displayableText);
-        String s = "Level : " + intent.getStringExtra("SelectedLevel") + ". Selected players : ";
         ArrayList<Player> players = Helper.StringToPlayerList(intent.getStringExtra("Selected_players"));
-
-        //Get all Displayables from the JSON file
-        //First, read the JSON file and create a JSONObject
-        InputStream is = getResources().openRawResource(R.raw.displayed);
-        Writer writer = new StringWriter();
-        char[] buffer = new char[1024];
-        try {
-            Reader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
-            int n;
-            while ((n = reader.read(buffer)) != -1) {
-                writer.write(buffer, 0, n);
-            }
-            is.close();
-        } catch (IOException e) {
-            Intent i = new Intent(this, MainActivity.class);
-            i.putExtra("errorCode", "IOException");
-            startActivity(i);
-        }
-
-        ArrayList<Displayable> displayables = null;
-        try {
-            JSONObject jsonString = new JSONObject(writer.toString());
-
-            // Then, for each object, create a displayable
-            JSONArray jArray = jsonString.getJSONArray("displayables");
-            displayables = new ArrayList<>();
-            for (int i = 0; i < jArray.length(); i++) {
-                JSONObject currentDisplayable = jArray.getJSONObject(i);
-                String text = currentDisplayable.getString("Text");
-                int level = currentDisplayable.getInt("Level");
-                DisplayableType dType = currentDisplayable.getString("Type").equals("Dare") ? DisplayableType.DARE : DisplayableType.QUESTION;
-                JSONArray gendersJSON = currentDisplayable.getJSONArray("Targets");
-                ArrayList<Gender> genders = new ArrayList<>();
-
-                for (int j = 0; j < gendersJSON.length(); j++) {
-                    genders.add(Gender.valueOf((String) gendersJSON.get(j)));
-                }
-                displayables.add(new Displayable(text, level, dType, genders));
-            }
-        } catch (JSONException e) {
-            Intent i = new Intent(this, MainActivity.class);
-            i.putExtra("errorCode", "JSONException");
-            startActivity(i);
-        }
-        this.MainGame = new Game(players, Integer.parseInt(intent.getStringExtra("SelectedLevel")), displayables);
+        Helper.LoadDisplayables(this);
+        this.MainGame = new Game(players, Float.parseFloat(intent.getStringExtra("SelectedLevel")));
         currentIterationNumber = 0;
         displayNextQuestion();
     }
@@ -91,13 +48,15 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     private void displayNextQuestion(){
         //Check there are displayables left. If not, add 20 new displayables to the list
         if(currentIterationNumber >= currentDisplayables.size()){
-            currentDisplayables = MainGame.getRandomDisplayables();
+            currentDisplayables = new ArrayList<>(Helper.getRandomDisplayables(15, MainGame));
             currentIterationNumber = 0;
         }
 
         //Display next question
         TextView displayableText = (TextView) findViewById(R.id.displayableText);
-        displayableText.setText(buildDisplayableText(currentDisplayables.get(currentIterationNumber)));
+        Displayable d = currentDisplayables.get(currentIterationNumber);
+        displayableText.setText(buildDisplayableText(d));
+        displayableText.setTextSize(d.getFontSize());
         currentIterationNumber++;
     }
 

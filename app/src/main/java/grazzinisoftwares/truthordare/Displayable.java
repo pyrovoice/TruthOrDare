@@ -9,12 +9,16 @@ public class Displayable {
     int level;
     DisplayableType type;
     ArrayList<Gender> targets;
+    int fontSize;
+    private final int DEFAULT_FONT_SIZE = 24;
 
-    public Displayable(String text, int level, DisplayableType type, ArrayList<Gender> targets) {
+
+    public Displayable(String text, int level, DisplayableType type, ArrayList<Gender> targets, int fontSize) {
         this.text = text;
         this.level = level;
         this.type = type;
         this.targets = targets;
+        this.fontSize = fontSize;
     }
 
     public String getText() {
@@ -65,5 +69,9 @@ public class Displayable {
                 counter++;
         }
         return counter;
+    }
+
+    public int getFontSize() {
+        return this.fontSize > 0 ? this.fontSize : DEFAULT_FONT_SIZE;
     }
 }
