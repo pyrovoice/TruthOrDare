@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/PlayerIcon"
+        android:layout_width="106dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/TruthButton"
+        android:layout_width="300dp"
+        android:layout_height="157dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PlayerIcon"
+        app:srcCompat="@drawable/truthbutton01" />
+
+    <ImageView
+        android:id="@+id/SeparatorLine"
+        android:layout_width="352dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TruthButton"
+        app:srcCompat="@drawable/orseparator01" />
+
+    <ImageButton
+        android:id="@+id/DareButton"
+        android:layout_width="300dp"
+        android:layout_height="157dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SeparatorLine"
+        app:srcCompat="@drawable/darebutton01" />
+</android.support.constraint.ConstraintLayout>

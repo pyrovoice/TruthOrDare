@@ -57,20 +57,10 @@ public class Helper {
         }
     }
 
-    public static List<Displayable> getRandomDisplayables(int nbr, Game game) {
-        if(currentGameDisplayables.size()<= 0){
-            refreshGameDisplayables(game);
-        }
-
-        Collections.shuffle(currentGameDisplayables);
-        if (currentGameDisplayables.size() <= nbr) {
-            return currentGameDisplayables;
-        }
-
-        return currentGameDisplayables.subList(0, nbr-1);
-    }
-
     public static boolean LoadDisplayables(Context context){
+        if(allDisplayables != null){
+            return true;
+        }
         //Get all Displayables from the JSON file
         //First, read the JSON file and create a JSONObject
         InputStream is = context.getResources().openRawResource(R.raw.displayed);
@@ -114,5 +104,30 @@ public class Helper {
             return false;
         }
         return true;
+    }
+
+    public static Displayable getRandomDisplayableForPlayer(Game game, Player player, DisplayableType dType) {
+        if(currentGameDisplayables.size()<= 0){
+            refreshGameDisplayables(game);
+        }
+        Collections.shuffle(currentGameDisplayables);
+        for(Displayable d : currentGameDisplayables){
+            if((d.targets.contains(player.gender) || d.targets.contains(Gender.Any)) && d.type == dType)
+                return d;
+        }
+        return null;
+    }
+
+    public static List<Displayable> getRandomDisplayables(int nbr, Game game) {
+        if(currentGameDisplayables.size()<= 0){
+            refreshGameDisplayables(game);
+        }
+
+        Collections.shuffle(currentGameDisplayables);
+        if (currentGameDisplayables.size() <= nbr) {
+            return currentGameDisplayables;
+        }
+
+        return currentGameDisplayables.subList(0, nbr-1);
     }
 }

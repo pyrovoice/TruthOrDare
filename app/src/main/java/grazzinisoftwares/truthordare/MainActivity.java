@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ((Button) findViewById(R.id.Player4Button)).setOnClickListener(this);
         ((Button) findViewById(R.id.Player5Button)).setOnClickListener(this);
         ((Button) findViewById(R.id.Player6Button)).setOnClickListener(this);
+        ((Button) findViewById(R.id.Player7Button)).setOnClickListener(this);
+        ((Button) findViewById(R.id.Player8Button)).setOnClickListener(this);
     }
 
     public void onClick(View v) {
@@ -46,6 +48,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.Player4Button:
             case R.id.Player5Button:
             case R.id.Player6Button:
+            case R.id.Player7Button:
+            case R.id.Player8Button:
                 String buttonText = ((Button) v).getText().toString();
                 if (selectedPlayers.containsKey(buttonText)) {
                     if (selectedPlayers.get(buttonText) == Gender.Boy) {
@@ -72,6 +76,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button_validate:
                 Intent intent = new Intent(this, GameActivity.class);
                 TextView levelIndicator = (TextView) findViewById(R.id.levelIndicator);
+                intent.putExtra("speedMode", ((CheckBox) findViewById(R.id.SpeedMode)).isChecked());
                 intent.putExtra("SelectedLevel", levelIndicator.getText().toString());
                 intent.putExtra("Selected_players", Helper.PlayerMapToString(selectedPlayers));
                 startActivity(intent);

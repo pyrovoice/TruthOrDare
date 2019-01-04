@@ -7,10 +7,12 @@ import java.util.Random;
 public class Game {
     ArrayList<Player> players = new ArrayList<>();
     float level;
+    boolean isQuickGame;
 
-    public Game(ArrayList<Player> players, float level) {
+    public Game(ArrayList<Player> players, float level, boolean isQuickGame) {
         this.players = players;
         this.level = level;
+        this.isQuickGame = isQuickGame;
     }
 
     public ArrayList<Player> getPlayers() {
@@ -30,14 +32,19 @@ public class Game {
     }
 
     // Return players at random given a list of genders
-    public ArrayList<Player> getRandomPlayers(ArrayList<Gender> targets) {
+    public ArrayList<Player> getRandomPlayers(ArrayList<Gender> targets, Player player) {
 
         ArrayList<Player> selectedPlayers = new ArrayList<>();
+
         //If the list select all players, no need to randomize
         if (targets.size() != players.size())
             Collections.shuffle(players);
         for (Gender g : targets) {
             //Get the next player in the list for the given gender
+            if(player != null && !selectedPlayers.contains(player) && (player.gender == g || g == Gender.Any)){
+                selectedPlayers.add(player);
+                continue;
+            }
             for (Player p : players) {
                 if (!selectedPlayers.contains(p) && (g == Gender.Any || g == p.gender)) {
                     selectedPlayers.add(p);
