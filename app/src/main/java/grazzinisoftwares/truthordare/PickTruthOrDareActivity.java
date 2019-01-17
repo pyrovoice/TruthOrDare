@@ -1,18 +1,19 @@
 package grazzinisoftwares.truthordare;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import java.util.ArrayList;
+import java.util.Date;
 
 public class PickTruthOrDareActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private Date lastBackPressed = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,14 +36,26 @@ public class PickTruthOrDareActivity extends AppCompatActivity implements View.O
         String result = null;
         switch (v.getId()) {
             case R.id.DareButton:
-                result = DisplayableType.DARE.toString();
+                result = ChallengeType.DARE.toString();
                 break;
             case R.id.TruthButton:
-                result = DisplayableType.QUESTION.toString();
+                result = ChallengeType.QUESTION.toString();
                 break;
         }
         returnIntent.putExtra("result", result);
         setResult(Activity.RESULT_OK, returnIntent);
         finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (lastBackPressed == null || lastBackPressed.getTime() + 4000 < new Date().getTime()) {
+            lastBackPressed = new Date();
+            Toast.makeText(this, "Press back again to quit current game.", Toast.LENGTH_SHORT).show();
+        }else{
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
     }
 }

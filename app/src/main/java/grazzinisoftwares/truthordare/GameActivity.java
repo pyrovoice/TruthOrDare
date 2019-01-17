@@ -1,32 +1,23 @@
 package grazzinisoftwares.truthordare;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.io.StringWriter;
-import java.io.Writer;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class GameActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Game MainGame;
-    private ArrayList<Displayable> currentDisplayables = new ArrayList();
+    private ArrayList<Challenge> currentChallenges = new ArrayList();
     private int currentIterationNumber = 0;
     private int currentSelectedPlayer = -1;
+    private Date lastBackPressed = null;
 
 
     @Override
@@ -44,6 +35,18 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         Helper.LoadDisplayables(this);
         this.MainGame = new Game(players, Float.parseFloat(intent.getStringExtra("SelectedLevel")), intent.getBooleanExtra("speedMode", false));
         startNextRound();
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (lastBackPressed == null || lastBackPressed.getTime() + 4000 < new Date().getTime()) {
+            lastBackPressed = new Date();
+            Toast.makeText(this, "Press back again to quit current game.", Toast.LENGTH_SHORT).show();
+        }else{
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
     }
 
     private void startNextRound() {
@@ -71,35 +74,31 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
         if (requestCode == 1) {
             Player p = MainGame.players.get(currentSelectedPlayer);
-            Displayable d = Helper.getRandomDisplayableForPlayer(MainGame, p, DisplayableType.valueOf(data.getStringExtra("result")));
+            Challenge d = Helper.getRandomDisplayableForPlayer(MainGame, p, ChallengeType.valueOf(data.getStringExtra("result")));
             TextView displayableText = (TextView) findViewById(R.id.displayableText);
-            displayableText.setText(buildDisplayableText(d, MainGame.getRandomPlayers(d.targets, p)));
+            displayableText.setText(Helper.buildDisplayableText(d, MainGame.getRandomPlayers(d.targets, p)));
             displayableText.setTextSize(d.getFontSize());
         }
     }
 
     private void quickGameActivity() {
         //Check there are displayables left. If not, add 20 new displayables to the list
-        if (currentIterationNumber >= currentDisplayables.size()) {
-            currentDisplayables = new ArrayList<>(Helper.getRandomDisplayables(15, MainGame));
+        if (currentIterationNumber >= currentChallenges.size()) {
+            currentChallenges = new ArrayList<>(Helper.getRandomDisplayables(15, MainGame));
             currentIterationNumber = 0;
         }
 
         //Display next question
         TextView displayableText = (TextView) findViewById(R.id.displayableText);
-        Displayable d = currentDisplayables.get(currentIterationNumber);
-        displayableText.setText(buildDisplayableText(d, MainGame.getRandomPlayers(d.targets, null)));
+        Challenge d = currentChallenges.get(currentIterationNumber);
+        displayableText.setText(Helper.buildDisplayableText(d, MainGame.getRandomPlayers(d.targets, null)));
         displayableText.setTextSize(d.getFontSize());
         currentIterationNumber++;
     }
 
-    private String buildDisplayableText(Displayable d, ArrayList<Player> selectedPlayers) {
-        String text = d.text;
-        for (int i = 0; i < d.targets.size(); i++) {
-            text = text.replace("{" + i + "}", selectedPlayers.get(i).iconName);
-        }
-        return text;
-    }
+
+
+
 
     @Override
     public void onClick(View v) {

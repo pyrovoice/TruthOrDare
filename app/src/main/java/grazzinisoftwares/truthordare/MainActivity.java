@@ -1,15 +1,20 @@
 package grazzinisoftwares.truthordare;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.view.menu.MenuBuilder;
 import android.util.Pair;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Dictionary;
@@ -19,8 +24,8 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private static final int LEVEL_LOWER_LIMIT = 2;
-    private static final int LEVEL_HIGHER_LIMIT = 3;
+    public static final int LEVEL_LOWER_LIMIT = 1;
+    public static final int LEVEL_HIGHER_LIMIT = 4;
     private Map<String, Gender> selectedPlayers = new HashMap<String, Gender>();
 
     @Override
@@ -38,6 +43,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ((Button) findViewById(R.id.Player6Button)).setOnClickListener(this);
         ((Button) findViewById(R.id.Player7Button)).setOnClickListener(this);
         ((Button) findViewById(R.id.Player8Button)).setOnClickListener(this);
+        ((Button) findViewById(R.id.Player9Button)).setOnClickListener(this);
+        ((Button) findViewById(R.id.Player10Button)).setOnClickListener(this);
+        ((Button) findViewById(R.id.Player11Button)).setOnClickListener(this);
+        ((Button) findViewById(R.id.Player12Button)).setOnClickListener(this);
+        ((Button) findViewById(R.id.Player13Button)).setOnClickListener(this);
+        ((Button) findViewById(R.id.Player14Button)).setOnClickListener(this);
+        ((Button) findViewById(R.id.Player15Button)).setOnClickListener(this);
     }
 
     public void onClick(View v) {
@@ -50,6 +62,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.Player6Button:
             case R.id.Player7Button:
             case R.id.Player8Button:
+            case R.id.Player9Button:
+            case R.id.Player10Button:
+            case R.id.Player11Button:
+            case R.id.Player12Button:
+            case R.id.Player13Button:
+            case R.id.Player14Button:
+            case R.id.Player15Button:
                 String buttonText = ((Button) v).getText().toString();
                 if (selectedPlayers.containsKey(buttonText)) {
                     if (selectedPlayers.get(buttonText) == Gender.Boy) {
@@ -66,14 +85,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.leftArrowLevel:
-                changeLevel(-1);
+                changeLevel(-0.5f);
                 break;
 
             case R.id.rightArrowLevel:
-                changeLevel(1);
+                changeLevel(0.5f);
                 break;
 
             case R.id.button_validate:
+                if(selectedPlayers.size() <= 0){
+                    Toast.makeText(this, "Add players by tapping their icons.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 Intent intent = new Intent(this, GameActivity.class);
                 TextView levelIndicator = (TextView) findViewById(R.id.levelIndicator);
                 intent.putExtra("speedMode", ((CheckBox) findViewById(R.id.SpeedMode)).isChecked());
@@ -84,13 +107,37 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private boolean changeLevel(int i) {
+    private boolean changeLevel(float i) {
         TextView levelIndicator = (TextView) findViewById(R.id.levelIndicator);
-        int currentLevel = Integer.parseInt(levelIndicator.getText().toString());
+        float currentLevel = Float.parseFloat(levelIndicator.getText().toString());
         if (currentLevel + i < LEVEL_LOWER_LIMIT || currentLevel + i > LEVEL_HIGHER_LIMIT) {
             return false;
         }
         levelIndicator.setText("" + (currentLevel + i));
         return true;
+    }
+
+    @SuppressLint("RestrictedApi")
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu, menu);
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(final MenuItem item) {
+
+        switch (item.getItemId()) {
+            /*case R.id.settings:
+                //your code
+                return true;*/
+            case R.id.addNewChallenge:
+                Intent intent = new Intent(this, CreateChallengeActivity.class);
+                startActivity(intent);
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

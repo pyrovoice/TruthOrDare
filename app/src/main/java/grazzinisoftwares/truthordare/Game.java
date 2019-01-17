@@ -2,7 +2,6 @@ package grazzinisoftwares.truthordare;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Random;
 
 public class Game {
     ArrayList<Player> players = new ArrayList<>();
@@ -55,7 +54,7 @@ public class Game {
         return selectedPlayers;
     }
 
-    public boolean isDisplayableCompatible(Displayable d) {
+    public boolean isDisplayableCompatible(Challenge d) {
         return d.getNumberMale() <= this.getNumberMale() && d.getNumberFemale() <= this.getNumberFemale() && d.targets.size() <= this.players.size();
     }
 
