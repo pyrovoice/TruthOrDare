@@ -2,7 +2,7 @@
   "displayables": [
     {
       "Text": "{0} What are you most self-conscious about?",
-      "Level": 2,
+      "Level": [2],
       "Type": "Question",
       "Targets": [
         "Girl"
@@ -10,7 +10,7 @@
     },
     {
       "Text": "Everybody : Show the most embarrassing picture of someone in this game. People showing the least embarrasing picture drink.",
-      "Level": 3,
+      "Level": [2, 3, 4, 5],
       "Type": "Dare",
       "Targets": [
 
@@ -18,7 +18,7 @@
     },
     {
       "Text": "{0} What would you do if you were the opposite sex for a day?",
-      "Level": 2,
+      "Level": [2],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -26,7 +26,7 @@
     },
     {
       "Text": "{0} What is the most expensive thing you have stolen?",
-      "Level": 3,
+      "Level": [2, 3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -34,7 +34,7 @@
     },
     {
       "Text": "Everybody: What is the most expensive thing you have stolen? The highest value drinks 3 times. (Bad!)",
-      "Level": 3,
+      "Level": [2, 3, 4],
       "Type": "Question",
       "Targets": [
 
@@ -42,7 +42,7 @@
     },
     {
       "Text": "{0} What is the most childish thing you still do?",
-      "Level": 2,
+      "Level": [2, 3],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -50,7 +50,7 @@
     },
     {
       "Text": "{0} Have you ever let someone take the blame for something you did?",
-      "Level": 2,
+      "Level": [2, 3],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -58,7 +58,7 @@
     },
     {
       "Text": "{0} What did people think or have thought about you that was completely untrue?",
-      "Level": 2,
+      "Level": [2, 3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -66,7 +66,7 @@
     },
     {
       "Text": "{0} Who here would you most like to French kiss?",
-      "Level": 3,
+      "Level": [3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -74,7 +74,7 @@
     },
     {
       "Text": "{0} What is the biggest lie you ever told?",
-      "Level": 2,
+      "Level": [2, 3],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -82,7 +82,7 @@
     },
     {
       "Text": "{0} What is the meanest you have ever been to someone?",
-      "Level": 2,
+      "Level": [2, 3],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -90,7 +90,7 @@
     },
     {
       "Text": "{0} What is something that people think you would never do but you have?",
-      "Level": 3,
+      "Level": [1, 2, 3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -98,7 +98,7 @@
     },
     {
       "Text": "{0} What was the worst encounter you had with a police officer?",
-      "Level": 2,
+      "Level": [2, 3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -106,7 +106,7 @@
     },
     {
       "Text": "{0} Tell us about your most awkward date.",
-      "Level": 2,
+      "Level": [1, 2, 3],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -114,7 +114,7 @@
     },
     {
       "Text": "{0} What is the silliest thing you have an emotional attachment to? And why?",
-      "Level": 2,
+      "Level": [1, 2],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -122,7 +122,7 @@
     },
     {
       "Text": "{0} Where is the strangest place you have peed?",
-      "Level": 2,
+      "Level": [2, 3],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -130,7 +130,7 @@
     },
     {
       "Text": "{0} Who is the sexiest person here?",
-      "Level": 3,
+      "Level": [3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -138,7 +138,7 @@
     },
     {
       "Text": "{0} What was your worst first date?",
-      "Level": 3,
+      "Level": [2, 3],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -146,7 +146,7 @@
     },
     {
       "Text": "{0} What was your shortest time from meeting someone new to having sex with them?",
-      "Level": 3,
+      "Level": [3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -154,7 +154,7 @@
     },
     {
       "Text": "{0} Who here has the nicest butt? (Other than you)",
-      "Level": 3,
+      "Level": [2, 3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -162,7 +162,7 @@
     },
     {
       "Text": "{0} Have you ever made out with someone here, other than your partner?",
-      "Level": 3,
+      "Level": [3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -170,7 +170,7 @@
     },
     {
       "Text": "{0} If you woke up in the middle of the night sandwiched between your parents, with an inch of your dads dick up your ass and an inch of your dick inside your mothers vagina, would you move forwards or backwards to get out?",
-      "Level": 4,
+      "Level": [4],
       "Type": "Question",
       "Targets": [
         "Boy"
@@ -178,7 +178,7 @@
     },
     {
       "Text": "{0}, the girls have 30 seconds to put makeup on you (you cannot run). If the result is ugly, all participating girls drink.",
-      "Level": 3,
+      "Level": [3, 4],
       "Type": "Dare",
       "Targets": [
         "Boy"
@@ -186,7 +186,7 @@
     },
     {
       "Text": "{0} Dance to the music for 30 seconds.",
-      "Level": 2,
+      "Level": [1, 2, 3],
       "Type": "Dare",
       "Targets": [
         "Any"
@@ -194,7 +194,7 @@
     },
     {
       "Text": "{0} and {1}, dance together to the music for 30 seconds.",
-      "Level": 2,
+      "Level": [2, 3, 4],
       "Type": "Dare",
       "Targets": [
         "Boy", "Girl"
@@ -202,7 +202,7 @@
     },
     {
       "Text": "{0} Drink anything without using your hands.",
-      "Level": 2,
+      "Level": [1, 2, 3, 4],
       "Type": "Dare",
       "Targets": [
         "Any"
@@ -210,7 +210,7 @@
     },
     {
       "Text": "{0} Let the group pose you in an embarrassing position and take a picture.",
-      "Level": 3,
+      "Level": [1, 2, 3, 4, 5],
       "Type": "Dare",
       "Targets": [
         "Any"
@@ -218,7 +218,7 @@
     },
     {
       "Text": "{0}, you have 30s to make people guess a song by slapping {1}'s butt cheeks. If you cannot, drink!",
-      "Level": 3,
+      "Level": [3, 4, 5],
       "Type": "Dare",
       "Targets": [
         "Any",
@@ -227,15 +227,15 @@
     },
     {
       "Text": "{0}, let the group send a text message to a random contact in your list. (You can check it's not your boss first)",
-      "Level": 3,
+      "Level": [1, 2, 3, 4],
       "Type": "Dare",
       "Targets": [
         "Any"
       ]
     },
     {
-      "Text": "{0}, let the group make a drink for you.",
-      "Level": 3,
+      "Text": "{0}, the group makes a drink for you.",
+      "Level": [2, 3, 4],
       "Type": "Dare",
       "Targets": [
         "Any"
@@ -243,7 +243,7 @@
     },
     {
       "Text": "{0}, choose someone around the table that must write something embarrassing on your body.",
-      "Level": 3,
+      "Level": [3, 4, 5],
       "Type": "Dare",
       "Targets": [
         "Any"
@@ -251,7 +251,7 @@
     },
     {
       "Text": "{0} kiss {1}!",
-      "Level": 3,
+      "Level": [3, 4, 5],
       "Type": "Dare",
       "Targets": [
         "Boy",
@@ -260,7 +260,7 @@
     },
     {
       "Text": "{0} kiss {1}!",
-      "Level": 3,
+      "Level": [3, 4, 5],
       "Type": "Dare",
       "Targets": [
         "Any",
@@ -269,7 +269,7 @@
     },
     {
       "Text": "{0} and {1} must kiss {2} on the cheek at the same time.",
-      "Level": 3,
+      "Level": [3],
       "Type": "Dare",
       "Targets": [
         "Any", "Any", "Any"
@@ -277,7 +277,7 @@
     },
     {
       "Text": "{0}, the group will give you a new haircut! (No cut allowed, only gel and stuff)",
-      "Level": 3,
+      "Level": [3, 4],
       "Type": "Dare",
       "Targets": [
         "Any"
@@ -285,7 +285,7 @@
     },
     {
       "Text": "Everyone smiles! The game continue as usual. When someone stops smiling, that person drinks. (And the others can stop smiling)",
-      "Level": 2,
+      "Level": [1, 2, 3, 4],
       "Type": "Dare",
       "Targets": [
 
@@ -293,7 +293,7 @@
     },
     {
       "Text": "{0} must sniff {1}' armpits",
-      "Level": 2,
+      "Level": [2, 3, 4],
       "Type": "Dare",
       "Targets": [
         "Any", "Any"
@@ -301,7 +301,7 @@
     },
     {
       "Text": "{0}, you must declare lovingly the following poem to another player : \nMy love for you is like the raging sea, \nSo powerful and deep it will forever be. \nThrough storm, wind, and heavy rain, \nIt will withstand every pain.",
-      "Level": 2,
+      "Level": [2, 3, 4],
       "Type": "Dare",
       "Targets": [
         "Any"
@@ -310,7 +310,7 @@
     },
     {
       "Text": "{0}, you must talk in your best accent for the next 5 rounds.",
-      "Level": 2,
+      "Level": [1, 2, 3, 4],
       "Type": "Dare",
       "Targets": [
         "Any"
@@ -318,7 +318,7 @@
     },
     {
       "Text": "{0} and {1} switch their clothes.",
-      "Level": 3,
+      "Level": [3, 4],
       "Type": "Dare",
       "Targets": [
         "Boy",
@@ -327,7 +327,7 @@
     },
     {
       "Text": "{0} Juggle with 3 items of the group's choosing for 5 seconds. If you do, distribute 2 drinks.",
-      "Level": 2,
+      "Level": [1, 2, 3, 4],
       "Type": "Dare",
       "Targets": [
         "Any"
@@ -335,7 +335,7 @@
     },
     {
       "Text": "{0} fake a slap on {1}. The group must decide is the performance was good enough, otherwise a drink for both!",
-      "Level": 2,
+      "Level": [1, 2, 3, 4],
       "Type": "Dare",
       "Targets": [
         "Any", "Any", "Any"
@@ -343,7 +343,7 @@
     },
     {
       "Text": "{0} must sit on {1}'s lap and act like his girlfriend for 5 rounds.",
-      "Level": 3,
+      "Level": [3, 4, 5],
       "Type": "Dare",
       "Targets": [
         "Girl", "Boy"
@@ -351,7 +351,7 @@
     },
     {
       "Text": "{0} spank {1}.",
-      "Level": 3,
+      "Level": [3, 4, 5],
       "Type": "Dare",
       "Targets": [
         "Any", "Any"
@@ -359,7 +359,7 @@
     },
     {
       "Text": "{0}, the group will take a picture of your best grimace that you will then send to a relative of yours.",
-      "Level": 2,
+      "Level": [1, 2, 3, 4],
       "Type": "Dare",
       "Targets": [
         "Any"
@@ -367,7 +367,7 @@
     },
     {
       "Text": "{0} What is your favorite sexual position?",
-      "Level": 3,
+      "Level": [2, 3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -375,7 +375,7 @@
     },
     {
       "Text": "{0} and {1}, be ready! You must be the first to kiss {2}. The loser must kiss {2}'s feet instead.",
-      "Level": 3,
+      "Level": [3, 4],
       "Type": "Dare",
       "Targets": [
         "Boy", "Boy", "Girl"
@@ -383,15 +383,15 @@
     },
     {
       "Text": "{0}, call your mom and tell her you love her.",
-      "Level": 2,
+      "Level": [1, 2, 3, 4],
       "Type": "Dare",
       "Targets": [
         "Any"
       ]
     },
     {
-      "Text": "{0} Did you send a nude picture of yourself?",
-      "Level": 3,
+      "Text": "{0} Did you ever send a nude picture of yourself?",
+      "Level": [2, 3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -399,7 +399,7 @@
     },
     {
       "Text": "{0} Give a Dare of your choice!",
-      "Level": 3,
+      "Level": [1, 2, 3, 4, 5],
       "Type": "Dare",
       "Targets": [
         "Any"
@@ -407,23 +407,23 @@
     },
     {
       "Text": "{0} Ask a Question of your choice!",
-      "Level": 3,
+      "Level": [1, 2, 3, 4, 5],
       "Type": "Question",
       "Targets": [
         "Any"
       ]
     },
     {
-      "Text": "{0} What's your favorite guilty pleasure?",
-      "Level": 2,
+      "Text": "{0} What's your guilty pleasure?",
+      "Level": [1, 2, 3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
       ]
     },
     {
-      "Text": "{0} Have you masturbated at a friend's house?",
-      "Level": 3,
+      "Text": "{0} Have you ever masturbated at a friend's house?",
+      "Level": [2, 3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -431,7 +431,7 @@
     },
     {
       "Text": "{0} Show a piece of underwear to the room.",
-      "Level": 3,
+      "Level": [3],
       "Type": "Dare",
       "Targets": [
         "Girl"
@@ -439,7 +439,7 @@
     },
     {
       "Text": "{0} What is the most embarrassing thing you have seen a relative do ?",
-      "Level": 3,
+      "Level": [2, 3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -447,7 +447,7 @@
     },
     {
       "Text": "{0} If you were an ice cream flavor, what would you be ?",
-      "Level": 1,
+      "Level": [1, 2],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -455,7 +455,7 @@
     },
     {
       "Text": "{0} How many pairs of shoes do you own ?",
-      "Level": 1,
+      "Level": [1, 2],
       "Type": "Question",
       "Targets": [
         "Girl"
@@ -463,7 +463,7 @@
     },
     {
       "Text": "{0} Who was the first person you fell in love with ?",
-      "Level": 2,
+      "Level": [2, 3],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -471,7 +471,7 @@
     },
     {
       "Text": "{0} Have you ever peed in the swimming pool ?",
-      "Level": 2,
+      "Level": [1, 2],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -479,7 +479,7 @@
     },
     {
       "Text": "{0} What was the worst way a love interest has rejected you ?",
-      "Level": 2,
+      "Level": [2, 3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -487,7 +487,7 @@
     },
     {
       "Text": "{0} Have you had sex with someone at your job ?",
-      "Level": 3,
+      "Level": [3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -495,7 +495,7 @@
     },
     {
       "Text": "{0} What talent do you have that is embarrassing to share ?",
-      "Level": 2,
+      "Level": [1, 2, 3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -503,7 +503,7 @@
     },
     {
       "Text": "{0} How long do you usually wait to have sex with a love interest ?",
-      "Level": 2,
+      "Level": [2, 3, 4],
       "Type": "Question",
       "Targets": [
         "Girl"
@@ -511,7 +511,7 @@
     },
     {
       "Text": "{0} What is the most embarrassing tv show or movie you love watching ?",
-      "Level": 1,
+      "Level": [1, 2, 3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -519,7 +519,7 @@
     },
     {
       "Text": "{0} Have you ever tried ice skating ?",
-      "Level": 1,
+      "Level": [1, 2],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -527,7 +527,7 @@
     },
     {
       "Text": "{0} What would you buy with a million dollar ?",
-      "Level": 1,
+      "Level": [1, 2],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -535,7 +535,7 @@
     },
     {
       "Text": "{0} How many people have you dated ?",
-      "Level": 2,
+      "Level": [2, 3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -543,15 +543,15 @@
     },
     {
       "Text": "{0} How many people have you had sex with ?",
-      "Level": 3,
+      "Level": [2, 3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
       ]
     },
     {
-      "Text": "{0} What was the most embarrassing moment in front of your parents?",
-      "Level": 2,
+      "Text": "{0} What was your most embarrassing moment in front of your parents?",
+      "Level": [2, 3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -559,7 +559,7 @@
     },
     {
       "Text": "{0} Have you ever had sex with an ex?",
-      "Level": 3,
+      "Level": [2, 3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -567,7 +567,7 @@
     },
     {
       "Text": "{0} Which celebrity do you find the hottest?",
-      "Level": 2,
+      "Level": [2, 3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -575,7 +575,7 @@
     },
     {
       "Text": "{0} Have you ever been in a fight?",
-      "Level": 2,
+      "Level": [1, 2, 3],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -583,7 +583,7 @@
     },
     {
       "Text": "{0} What is your favorite weird food combination?",
-      "Level": 2,
+      "Level": [1, 2, 3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -591,7 +591,15 @@
     },
     {
       "Text": "{0} Imitate an animal of your choice.",
-      "Level": 1,
+      "Level": [1, 2],
+      "Type": "Dare",
+      "Targets": [
+        "Any"
+      ]
+    },
+    {
+      "Text": "{0}, you must act like your selected icon for 5 rounds.",
+      "Level": [1, 2, 3, 4],
       "Type": "Dare",
       "Targets": [
         "Any"
@@ -599,7 +607,7 @@
     },
     {
       "Text": "{0} Do you have a tattoo? Do you want to get one?",
-      "Level": 1,
+      "Level": [1, 2, 3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -607,7 +615,7 @@
     },
     {
       "Text": "{0} Do you have a piercing? Do you want to get one?",
-      "Level": 1,
+      "Level": [1, 2, 3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -615,7 +623,7 @@
     },
     {
       "Text": "{0} What is your favorite period of the year?",
-      "Level": 1,
+      "Level": [1, 2],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -623,7 +631,7 @@
     },
     {
       "Text": "{0} Have you ever tried menacing someone?",
-      "Level": 1,
+      "Level": [1, 2, 3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -631,7 +639,7 @@
     },
     {
       "Text": "{0} Have you ever taken a shower with someone of the same gender as you that was not your partner?",
-      "Level": 3,
+      "Level": [3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -639,7 +647,7 @@
     },
     {
       "Text": "{0} Have you ever taken a shower with someone of another gender that was not your partner?",
-      "Level": 3,
+      "Level": [3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -647,7 +655,7 @@
     },
     {
       "Text": "{0} If you had to fuck an animal, which one would you choose?",
-      "Level": 4,
+      "Level": [4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -655,15 +663,15 @@
     },
     {
       "Text": "{0} Who is your worst ex?",
-      "Level": 2,
+      "Level": [2, 3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
       ]
     },
     {
-      "Text": "{0} and {1}, hold each other's chin. The first who laugh has to drink.",
-      "Level": 2,
+      "Text": "{0} and {1}, hold each other's chin. The first who laughs has to drink.",
+      "Level": [1, 2],
       "Type": "Dare",
       "Targets": [
         "Any", "Any"
@@ -671,7 +679,7 @@
     },
     {
       "Text": "{0} For you, what is the worst thing about being a grown up ?",
-      "Level": 1,
+      "Level": [1, 2],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -679,7 +687,7 @@
     },
     {
       "Text": "{0} For you, what is the best thing about being a grown up ?",
-      "Level": 1,
+      "Level": [1, 2],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -687,7 +695,7 @@
     },
     {
       "Text": "{0} You can relocate a country. Which one and where?",
-      "Level": 1,
+      "Level": [1, 2, 3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -695,15 +703,7 @@
     },
     {
       "Text": "{0} When was the last time you threw up?",
-      "Level": 2,
-      "Type": "Question",
-      "Targets": [
-        "Any"
-      ]
-    },
-    {
-      "Text": "{0} When was the last time you shit yourself?",
-      "Level": 3,
+      "Level": [2, 3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -711,7 +711,7 @@
     },
     {
       "Text": "{0} Which country is the best in history? Can you sing that country's hymn?",
-      "Level": 2,
+      "Level": [1, 2, 3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -719,7 +719,7 @@
     },
     {
       "Text": "{0} What is the worst gift you ever received?",
-      "Level": 1,
+      "Level": [1, 2],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -727,7 +727,7 @@
     },
     {
       "Text": "{0} What was the longest time you spent without changing underwear?",
-      "Level": 1,
+      "Level": [2, 3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -735,7 +735,7 @@
     },
     {
       "Text": "{0} What's your favorite song or group?",
-      "Level": 1,
+      "Level": [1, 2],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -743,7 +743,7 @@
     },
     {
       "Text": "{0} What's your favorite book or author?",
-      "Level": 1,
+      "Level": [1, 2],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -751,7 +751,7 @@
     },
     {
       "Text": "{0} What's your favorite movie or director?",
-      "Level": 1,
+      "Level": [1, 2],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -759,7 +759,7 @@
     },
     {
       "Text": "{0} Do you have a crush?",
-      "Level": 2,
+      "Level": [2, 3],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -767,7 +767,7 @@
     },
     {
       "Text": "{0} What's your best memory of your childhood?",
-      "Level": 1,
+      "Level": [1, 2],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -775,7 +775,7 @@
     },
     {
       "Text": "{0} What do you hate most about {1}?",
-      "Level": 2,
+      "Level": [2, 3, 4],
       "Type": "Question",
       "Targets": [
         "Any", "Any"
@@ -783,7 +783,7 @@
     },
     {
       "Text": "{0} What do you love most about {1}?",
-      "Level": 2,
+      "Level": [2, 3, 4],
       "Type": "Question",
       "Targets": [
         "Any", "Any"
@@ -791,7 +791,7 @@
     },
     {
       "Text": "{0} What is something interesting we don't know about you?",
-      "Level": 1,
+      "Level": [1, 2, 3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -799,7 +799,7 @@
     },
     {
       "Text": "{0} Stand on all fours like a dog, and eat something from {1}'s hand.",
-      "Level": 2,
+      "Level": [2, 3, 4],
       "Type": "Dare",
       "Targets": [
         "Any", "Any"
@@ -807,7 +807,7 @@
     },
     {
       "Text": "{0} The group chooses something you have to wear on your head for the rest of the game.",
-      "Level": 2,
+      "Level": [1, 2, 3, 4],
       "Type": "Dare",
       "Targets": [
         "Any"
@@ -815,7 +815,7 @@
     },
     {
       "Text": "{0} kiss {1} anywhere they chooses.",
-      "Level": 3,
+      "Level": [3, 4, 5],
       "Type": "Dare",
       "Targets": [
         "Any", "Any"
@@ -823,7 +823,7 @@
     },
     {
       "Text": "{0} gives {1} a piggyback ride around the house/apartment.",
-      "Level": 2,
+      "Level": [2, 3, 4],
       "Type": "Dare",
       "Targets": [
         "Boy", "Girl"
@@ -831,7 +831,7 @@
     },
     {
       "Text": "{0} you must impersonate a character of your choice for the next 10 rounds.",
-      "Level": 2,
+      "Level": [1, 2, 3, 4],
       "Type": "Dare",
       "Targets": [
         "Any"
@@ -839,7 +839,7 @@
     },
     {
       "Text": "{0} and {1} must impersonate each other for the next 10 rounds.",
-      "Level": 2,
+      "Level": [1, 2, 3, 4],
       "Type": "Dare",
       "Targets": [
         "Any", "Any"
@@ -847,7 +847,7 @@
     },
     {
       "Text": "{0} must give {1} a back massage for the next 5 rounds, without stopping at any price. If he fails, he drinks two times.",
-      "Level": 3,
+      "Level": [3, 4],
       "Type": "Dare",
       "Targets": [
         "Boy", "Girl"
@@ -855,7 +855,7 @@
     },
     {
       "Text": "{0}, access any of {1} social media account. You have 30 seconds to write anything with your feet and publish it.",
-      "Level": 3,
+      "Level": [3, 4],
       "Type": "Dare",
       "Targets": [
         "Any", "Any"
@@ -863,7 +863,7 @@
     },
     {
       "Text": "{0} gets blindfolded. The group chooses another player that {0} must recognize only by touching their face.",
-      "Level": 3,
+      "Level": [3],
       "Type": "Dare",
       "Targets": [
         "Any"
@@ -871,7 +871,7 @@
     },
     {
       "Text": "{0} Do a cartwheel.",
-      "Level": 2,
+      "Level": [2],
       "Type": "Dare",
       "Targets": [
         "Any"
@@ -879,7 +879,7 @@
     },
     {
       "Text": "{0} Prank call someone.",
-      "Level": 2,
+      "Level": [1, 2],
       "Type": "Dare",
       "Targets": [
         "Any"
@@ -887,7 +887,7 @@
     },
     {
       "Text": "{0} Do the chicken dance.",
-      "Level": 1,
+      "Level": [1, 2],
       "Type": "Dare",
       "Targets": [
         "Any"
@@ -895,7 +895,7 @@
     },
     {
       "Text": "{0} If you could travel to any time period of history, which one would you choose?",
-      "Level": 1,
+      "Level": [1, 2],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -903,7 +903,7 @@
     },
     {
       "Text": "{0} Try to fit as many ice cubes as possible in your mouth.",
-      "Level": 1,
+      "Level": [1, 2],
       "Type": "Dare",
       "Targets": [
         "Any"
@@ -911,7 +911,7 @@
     },
     {
       "Text": "{0} What is your biggest sexual fantasy?",
-      "Level": 3,
+      "Level": [3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -919,7 +919,7 @@
     },
     {
       "Text": "{0} What is your biggest turn-on?",
-      "Level": 3,
+      "Level": [3, 4],
       "Type": "Question",
       "Targets": [
         "Any"
@@ -927,7 +927,7 @@
     },
     {
       "Text": "{0} Eat hot sauce without anything else.",
-      "Level": 3,
+      "Level": [2, 3, 4],
       "Type": "Dare",
       "Targets": [
         "Any"
@@ -935,15 +935,15 @@
     },
     {
       "Text": "{0}, demonstrate how you would accost {1} in a bar.",
-      "Level": 2,
+      "Level": [2, 3, 4],
       "Type": "Dare",
       "Targets": [
-        "Boy", "Girl"
+        "Any", "Any"
       ]
     },
     {
       "Text": "{0} Try doing the split and go as far as you can.",
-      "Level": 2,
+      "Level": [2, 3],
       "Type": "Dare",
       "Targets": [
         "Any"
@@ -951,7 +951,7 @@
     },
     {
       "Text": "{0} Tell us a joke.",
-      "Level": 1,
+      "Level": [1, 2],
       "Type": "Dare",
       "Targets": [
         "Any"
@@ -959,15 +959,7 @@
     },
     {
       "Text": "{0} Take of your shirt.",
-      "Level": 3,
-      "Type": "Dare",
-      "Targets": [
-        "Any"
-      ]
-    },
-    {
-      "Text": "{0} Take of your shirt.",
-      "Level": 3,
+      "Level": [3, 4],
       "Type": "Dare",
       "Targets": [
         "Any"
@@ -975,7 +967,7 @@
     },
     {
       "Text": "{0} Remove a piece of underwear.",
-      "Level": 3,
+      "Level": [3, 4],
       "Type": "Dare",
       "Targets": [
         "Girl"
@@ -983,7 +975,7 @@
     },
     {
       "Text": "{0} Remove a piece of cloth.",
-      "Level": 3,
+      "Level": [3, 4],
       "Type": "Dare",
       "Targets": [
         "Any"
@@ -991,7 +983,7 @@
     },
     {
       "Text": "{0} Show us how you twerk.",
-      "Level": 2,
+      "Level": [2, 3],
       "Type": "Dare",
       "Targets": [
         "Any"
@@ -999,23 +991,23 @@
     },
     {
       "Text": "{0} The group blindfolds you. You must kiss every other player, then guess who is who.",
-      "Level": 4,
+      "Level": [4],
       "Type": "Dare",
       "Targets": [
         "Any"
       ]
     },
     {
-      "Text": "{0} Do a strip dance for {1}.",
-      "Level": 4,
+      "Text": "{0} Do a strip-tease for {1}.",
+      "Level": [4],
       "Type": "Dare",
       "Targets": [
         "Any", "Any"
       ]
     },
     {
-      "Text": "{0} Do a lap dance for {1}.",
-      "Level": 3,
+      "Text": "{0} Do a lapdance for {1}.",
+      "Level": [3, 4],
       "Type": "Dare",
       "Targets": [
         "Any", "Any"
@@ -1023,7 +1015,7 @@
     },
     {
       "Text": "{0} must touch {1}'s privates for 5 rounds.",
-      "Level": 4,
+      "Level": [4],
       "Type": "Dare",
       "Targets": [
         "Girl", "Any"
@@ -1031,7 +1023,7 @@
     },
     {
       "Text": "{0} must do a three-way kiss with {1} and {2}.",
-      "Level": 4,
+      "Level": [3, 4],
       "Type": "Dare",
       "Targets": [
         "Any", "Boy", "Girl"
@@ -1039,7 +1031,7 @@
     },
     {
       "Text": "{0} you must guess {1}'s penis size only by touching it.",
-      "Level": 4,
+      "Level": [4],
       "Type": "Dare",
       "Targets": [
         "Girl", "Boy"
@@ -1047,7 +1039,7 @@
     },
     {
       "Text": "{0} you must guess {1}'s breast size only by touching them.",
-      "Level": 4,
+      "Level": [4],
       "Type": "Dare",
       "Targets": [
         "Boy", "Girl"
@@ -1055,7 +1047,7 @@
     },
     {
       "Text": "{0} what is your best sexual success.",
-      "Level": 4,
+      "Level": [4],
       "Type": "Question",
       "Targets": [
         "Boy", "Girl"
@@ -1063,7 +1055,7 @@
     },
     {
       "Text": "{0} How you would make {1} have an orgasm?",
-      "Level": 4,
+      "Level": [4],
       "Type": "Question",
       "Targets": [
         "Any", "Any"
@@ -1071,23 +1063,23 @@
     },
     {
       "Text": "{0} must strip to their underwear and do a run around the house/apartment.",
-      "Level": 3,
-      "Type": "Question",
+      "Level": [3],
+      "Type": "Dare",
       "Targets": [
         "Any"
       ]
     },
     {
       "Text": "{0} must strip naked and do a run around the house/apartment.",
-      "Level": 4,
-      "Type": "Question",
+      "Level": [4],
+      "Type": "Dare",
       "Targets": [
         "Any"
       ]
     },
     {
       "Text": "{0} and {1} must strip to their underwear and imitate a sexual position of the group's choice.",
-      "Level": 4,
+      "Level": [4],
       "Type": "Dare",
       "Targets": [
         "Any", "Any"
@@ -1095,7 +1087,7 @@
     },
     {
       "Text": "{0} and {1} must imitate a sexual position of the group's choice.",
-      "Level": 3,
+      "Level": [3],
       "Type": "Dare",
       "Targets": [
         "Any", "Any"
@@ -1103,7 +1095,7 @@
     },
     {
       "Text": "{0} must get naked.",
-      "Level": 4,
+      "Level": [4],
       "Type": "Dare",
       "Targets": [
         "Any"
@@ -1111,7 +1103,7 @@
     },
     {
       "Text": "{0} put a small edible item in your mouth. Everybody must take this item and pass it to the next player only using their mouth. If a couple fails, both players drink.",
-      "Level": 3,
+      "Level": [3, 4],
       "Type": "Dare",
       "Targets": [
         "Any"
@@ -1119,7 +1111,7 @@
     },
     {
       "Text": "{0} put a card in front of your mouth, so you can block it by inhaling. Everybody must take this item and pass it to the next player only using their breath.",
-      "Level": 2,
+      "Level": [2],
       "Type": "Dare",
       "Targets": [
         "Any"
@@ -1127,7 +1119,7 @@
     },
     {
       "Text": "{0} must give {1} a shooter of alcohol only using his mouth.",
-      "Level": 3,
+      "Level": [3, 4],
       "Type": "Dare",
       "Targets": [
         "Any", "Any"
